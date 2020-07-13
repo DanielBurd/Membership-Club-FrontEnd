@@ -1,0 +1,26 @@
+<div class="container">
+    <ul class="responsive-table">
+        <li class="table-header">
+          <div class="col col-1">שם</div>
+          <div class="col col-2"> טלפון</div>
+          <div class="col col-3">חודש יומולדת</div>
+          <div class="col col-4">מספר משקאות</div>
+          <div class="col col-3"> עדכן</div>
+          <div class="col col-4">מחק </div>
+        </li>
+    </ul>
+    <ul class="responsive-table overflow">
+      <li class="table-row" *ngFor="let u of users">
+        <div class="col col-1">{{u.name}}</div>
+        <div class="col col-2">{{u.phone}}</div>
+        <div class="col col-3">{{u.bdMonth}}</div>
+        <div class="col col-4" >{{u.drinks}}</div>
+        <div class="col col-3" >
+            <button (click)="delete(u.phone)"> מחק</button>
+        </div>
+        <div class="col col-4">
+            <button routerLink="/update/{{u.phone}}">עדכן</button>
+        </div>
+      </li>
+   </ul>
+  </div>

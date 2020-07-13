@@ -1,0 +1,17 @@
+
+
+<div class="pricing-box-container">
+	<div class="pricing-box text-center">
+		<h5>{{user.name}}</h5>
+		<ul class="features-list">
+			<li> {{user.phone}}</li>
+			<li>{{user.bdMonth|months}}</li>
+			<li> {{user.drinks}} </li>
+		</ul>
+        <button class="btn-primary" (click)="addDrink()">הוסף משקה</button>
+        <span>&nbsp;</span>
+	</div>
+     <button  *ngIf="user.drinks>=10" class="btn-primary free" (click)="user.drinks=user.drinks-10" > משקה מתנה</button>
+    <span> &nbsp;</span>
+    <button *ngIf="user.usedGift==0 && user.gift==true " class="btn-primary bday" (click)="user.usedGift=user.usedGift+1">משקה יומולדת</button>
+</div>
