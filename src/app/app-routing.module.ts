@@ -9,9 +9,9 @@ import { AdminUpdateComponent } from './components/admin-update/admin-update.com
 
 
 const routes: Routes = [
-    {path:'home', component:MainComponent},
-    {path:'new-user',component:NewUserComponent},
-    {path:'user', component:UserComponent},
+    //{path:'home', component:MainComponent},
+    {path:'new-user/:ph',component:NewUserComponent},
+    {path:'home', component:UserComponent},
     {path:'show-user/:ph', component:ShowUserComponent},
     {path:'admin', component:AdminComponent},
     {path:'update/:ph', component:AdminUpdateComponent},

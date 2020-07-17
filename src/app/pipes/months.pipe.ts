@@ -17,7 +17,7 @@ export class MonthsPipe implements PipeTransform {
         case 8:return 'אוגוסט';
         case 9:return 'ספטמבר';
         case 10:return 'אוקטובר';
-        case 11:return 'נובומבר';
+        case 11:return 'נובמבר';
         case 12:return 'דצמבר';
     }
   }
